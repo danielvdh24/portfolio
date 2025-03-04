@@ -1,4 +1,4 @@
-import { useEffect, useState, useLayoutEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import ReactPlayer from "react-player";
 import { Project } from "@/data/projects";
 import { cn } from "@/lib/utils";
@@ -13,6 +13,24 @@ interface ProjectContentProps {
 const ProjectContent = ({ project }: ProjectContentProps) => {
   const [loaded, setLoaded] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const isDraggingRef = useRef(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!scrollRef.current || e.buttons !== 1) return;
+    scrollRef.current.scrollLeft -= e.movementX;
+    isDraggingRef.current = true;
+  };
+
+  const handleMouseDown = () => {
+    isDraggingRef.current = false; // Reset drag state
+  };
+
+  const handleImageClick = (image: string) => {
+    if (isDraggingRef.current) return;
+    setSelectedImage(image);
+  };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -21,6 +39,25 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
 
     return () => clearTimeout(timeout); // Cleanup timeout on unmount
   }, [project.id]);
+
+  useEffect(() => {
+    if (selectedImage) {
+      const currentScrollY = window.scrollY;
+      setScrollY(currentScrollY);
+
+      // Lock scroll position
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${currentScrollY}px`;
+      document.body.style.width = "100%";
+    } else {
+      // Restore scroll position
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, scrollY);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedImage]);
 
   return (
     <div
@@ -128,24 +165,30 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
           {/* Images Section */}
           {project.images.length > 0 && (
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold">Images</h3>
-              <div
-                className="flex gap-4 overflow-x-auto scrollbar-hide"
-                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-              >
-                {project.images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`${project.name} - Image ${index + 1}`}
-                    className="w-[200px] h-[150px] object-cover rounded-lg shadow-lg cursor-pointer transition-transform duration-300 ease-in-out 
-                     hover:brightness-90"
-                    onClick={() => setSelectedImage(image)}
-                  />
-                ))}
-              </div>
+            <h3 className="text-xl font-semibold">Images</h3>
+            <div
+              ref={scrollRef}
+              className="flex gap-4 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing select-none"
+              style={{
+                scrollbarWidth: "none", // Hide scrollbar for Firefox
+                msOverflowStyle: "none", // Hide scrollbar for IE/Edge
+              }}
+              onMouseMove={handleMouseMove}
+            >
+              {project.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`${project.name} - Image ${index + 1}`}
+                  className="w-[200px] h-[150px] object-cover rounded-lg shadow-lg cursor-pointer transition-transform duration-300 ease-in-out hover:brightness-90"
+                  onMouseDown={handleMouseDown}
+                  onClick={() => handleImageClick(image)}
+                  onDragStart={(e) => e.preventDefault()}
+                />
+              ))}
             </div>
-          )}
+          </div>
+        )}
 
           {/* Image Overlay */}
           {selectedImage &&
