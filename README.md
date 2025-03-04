@@ -1,16 +1,14 @@
-# My Portfolio
-
 [![Deploy Status](https://github.com/danielvdh24/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/danielvdh24/portfolio/actions)
+<div align="left">
+    <img src="https://github.com/user-attachments/assets/231ff6be-a749-4871-8440-6baa61f42717" style="height: 370px;">
+</div>
 
-This is my personal portfolio website, built with **React, TypeScript, Vite, and TailwindCSS**.
+Welcome to my personal portfolio, created using React, TypeScript, Vite, and TailwindCSS. The website automatically builds and deploys through GitHub Actions whenever new changes are pushed to the main branch.
 
-## Auto Deployment
-This project uses **GitHub Actions** to automatically **build and deploy** the site whenever new changes are pushed to the `main` branch.
-
----
+The purpose of this portfolio is to showcase my growth and skills acquired over the past three years during my Bachelor's in Software Engineering and Management at Gothenburg University, as I work towards becoming a Junior Developer.
 
 ## Development
-To run the project locally:
+To run project locally:
 
 ```bash
 git clone https://github.com/danielvdh24/project-folder-portfolio.git
@@ -19,10 +17,8 @@ npm i
 npm run dev
 ```
 
-Then visit http://localhost:0000 in your browser.
-
 ## Manual Deployment
-If needed, to manually build and deploy:
+To manually build and deploy:
 
 ```bash
 npm run build
