@@ -77,7 +77,7 @@ export const projectsData: Project[] = [
     name: "Weather Wise",
     description: "A lightweight program to find the latest weather data.",
     demo: "https://player.vimeo.com/video/1062366303?h=bb0b588461",
-    features: ["Clean, intuitive interface built with JavaFX", "City & geolocation-based weather search", "Adaptive weather icons", "Invalid input validation"],
+    features: ["Clean, intuitive interface built with JavaFX.", "City & geolocation-based weather search.", "Adaptive weather icons.", "Invalid input validation."],
     technology: ["Java", "ApacheMaven"],
     authors: [
       { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" }
@@ -106,5 +106,24 @@ export const projectsData: Project[] = [
     images: ["https://i.ibb.co/R4S0rrd7/Admin.png", "https://i.ibb.co/HL2TC8Xh/Resumes.png", "https://i.ibb.co/wNbCw18q/Derivative.png"],
     githubLink: "https://github.com/danielvdh24/smart-match",
     color: "rgba(180, 160, 48, 0.7)"
+  },
+  {
+    id: "project6",
+    name: "Serpent",
+    description: "A snake game built with JavaFX.",
+    demo: "https://player.vimeo.com/video/1062888147?h=fe3d1ae96a",
+    features: ["Interactive UI with glowing effects and smooth animations.", "Tracked leaderboard that saves high scores persistently.", "Real-time collision detection for responsive gameplay."],
+    technology: ["Java", "ApacheMaven"],
+    authors: [
+      { name: "Erik Nisbet", github: "https://github.com/nisbeterik" },
+      { name: "Asim Altinisik", github: "https://github.com/Indomet" },
+      { name: "Marko Mosjov", github: "https://github.com/marko" },
+      { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" },
+      { name: "Rizwan Rafiq", github: "https://github.com/rizwanrafiq1214" }
+    ],
+    comments: "This was one of my very first projects, and designing a playable Snake game in JavaFX with Maven was incredibly fun. I learned about game loops, event handling, collision detection, and real-time user input processing. Structuring it with Maven improved my understanding of dependency management, while working with JavaFX’s scene graph and animations taught me UI-driven development. Debugging movement issues and optimizing game logic pushed my problem-solving skills. Overall, this project strengthened my OOP fundamentals and was a great introduction to event-driven programming and interactive applications.",
+    images: ["https://i.ibb.co/bjrpJ6YW/Serpent-Game.png", "https://i.ibb.co/spDRmssX/Leaderboard.png"],
+    githubLink: "https://github.com/danielvdh24/serpent",
+    color: "rgba(117, 110, 133, 0.7)"
   }
 ];
