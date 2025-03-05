@@ -18,7 +18,10 @@ export const projectsData: Project[] = [
     name: "Lindholmen Eats",
     description: "A web-based application for ordering food.",
     demo: "https://player.vimeo.com/video/1062141173?h=c0ab6ed5d4",
-    features: ["Intuitive navigation with dedicated pages for menu browsing and restaurant details.", "Streamlined checkout process with options for pickup or delivery and order confirmation.", "Engaging UI elements, including dynamic shopping cart updates and interactive product selection.", "Google Maps API for location tracking."],
+    features: ["Intuitive navigation with dedicated pages for menu browsing and restaurant details.", 
+               "Streamlined checkout process with options for pickup or delivery and order confirmation.",
+               "Engaging UI elements, including dynamic shopping cart updates and interactive product selection.", "Google Maps API for location tracking."
+              ],
     technology: ["MongoDB", "VueJS", "Express"],
     authors: [
       { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" },
@@ -50,7 +53,7 @@ export const projectsData: Project[] = [
       { name: "Markus Warbert", github: "https://github.com/warbert" }
     ],
     comments: "This project pushed me to work with hardware-software integration, real-time data processing, and IoT communication using the MQTT protocol. We programmed the Wio Terminal with Arduino IDE (basically C++), and setting up a three-tier system gave me a solid understanding of distributed architecture. There were plenty of challenges such as like sensor inaccuracies that forced us to adapt and problem-solve. Commit tracking and structured reviews helped maintain quality, and manual testing ensured stability. In the end, this project gave me great experience in embedded systems and designing reliable, user-friendly IoT solutions.",
-    images: ["https://i.ibb.co/cXYZqHz5/Wiring.png", "https://i.ibb.co/8ngF52Jm/greenguardian-system.jpg", "https://i.ibb.co/C3wK38Wy/image.png", "https://i.ibb.co/tMZ82GsG/Grass.png", "https://i.ibb.co/LzkDQ8Fz/Wifi.png"], 
+    images: ["https://i.ibb.co/cXYZqHz5/Wiring.png", "https://i.ibb.co/8ngF52Jm/greenguardian-system.jpg", "https://i.ibb.co/C3wK38Wy/image.png", "https://i.ibb.co/tMZ82GsG/Grass.png", "https://i.ibb.co/LzkDQ8Fz/Wifi.png"],
     githubLink: "https://github.com/danielvdh24/green-guardian",
     color: "rgba(46, 139, 87, 0.7)"
   },
@@ -74,21 +77,6 @@ export const projectsData: Project[] = [
   },
   {
     id: "project4",
-    name: "Weather Wise",
-    description: "A lightweight program to find the latest weather data.",
-    demo: "https://player.vimeo.com/video/1062366303?h=bb0b588461",
-    features: ["Clean, intuitive interface built with JavaFX.", "City & geolocation-based weather search.", "Adaptive weather icons.", "Invalid input validation."],
-    technology: ["Java", "ApacheMaven"],
-    authors: [
-      { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" }
-    ],
-    comments: "This project was all about JavaFX development, API integration, and UI design for a real-time weather application. I learned a lot about handling live data, making sure error validation was solid, and keeping the app reliable. Using the Singleton pattern for API calls made data fetching more efficient, and adding geolocation support and adaptive icons improved usability. JavaFX was a great way to dive deeper into modular development, and overall, this project helped me sharpen my skills in real-time data processing and building smooth, user-friendly Java applications.",
-    images: ["https://i.ibb.co/hRvQBHfL/Diagram.png", "https://i.ibb.co/TDGkZVkh/Singleton.png", "https://i.ibb.co/NRftTyp/Open-Weather.png"],
-    githubLink: "https://github.com/danielvdh24/weather-wise",
-    color: "rgba(48, 81, 180, 0.7)"
-  },
-  {
-    id: "project5",
     name: "Smart Match",
     description: "An AI-model for resume analysis and job role matching.",
     demo: "https://player.vimeo.com/video/1062576739?h=438f030d5c",
@@ -108,7 +96,41 @@ export const projectsData: Project[] = [
     color: "rgba(180, 160, 48, 0.7)"
   },
   {
+    id: "project5",
+    name: "Smile Slot",
+    description: "A dental service booking system using microservices.",
+    demo: "https://player.vimeo.com/video/1062963320?h=6db7115876",
+    features: ["Intuitive booking system to search, filter, and book dental appointments with real-time availability updates.", "Interactive map to find nearby clinics and services.", "Event driven communication with MQTT for reliable service communication."],
+    technology: ["VueJS", "ApacheMaven", "MQTT", "Python", "MongoDB", "Java"],
+    authors: [
+      { name: "Louis Mercier", github: "https://github.com/Lme20" },
+      { name: "Sam Hardingham", github: "https://github.com/samhardingham" },
+      { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" },
+      { name: "Kai Rowley", github: "https://github.com/irmata" },
+      { name: "Nishchya Arya", github: "https://github.com/nishchya-arya" }
+    ],
+    comments: "This project gave me solid exposure to distributed systems, microservice architecture, and event-driven communication. Using MQTT made service communication more reliable and reduced bottlenecks in authentication, email handling, and booking requests. Creating the website with Vue made the user experience more appealing and resource friendly due to its single page approach. Setting up MongoDB for persistent storage required careful planning, especially for handling availability and scheduling. One of the bigger challenges was keeping our four microservices in sync and managing environment variables securely for API connections.",
+    images: ["https://i.ibb.co/prvT18dR/Smile-SLOT.png", "https://i.ibb.co/dyTByGf/Map.png", "https://i.ibb.co/3q2HbkQ/Mongo.png"],
+    githubLink: "https://github.com/danielvdh24",
+    color: "rgba(95, 177, 182, 0.7)"
+  },
+  {
     id: "project6",
+    name: "Weather Wise",
+    description: "A lightweight program to find the latest weather data.",
+    demo: "https://player.vimeo.com/video/1062366303?h=bb0b588461",
+    features: ["Clean, intuitive interface built with JavaFX.", "City & geolocation-based weather search.", "Adaptive weather icons.", "Invalid input validation."],
+    technology: ["Java", "ApacheMaven"],
+    authors: [
+      { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" }
+    ],
+    comments: "This project was all about JavaFX development, API integration, and UI design for a real-time weather application. I learned a lot about handling live data, making sure error validation was solid, and keeping the app reliable. Using the Singleton pattern for API calls made data fetching more efficient, and adding geolocation support and adaptive icons improved usability. JavaFX was a great way to dive deeper into modular development, and overall, this project helped me sharpen my skills in real-time data processing and building smooth, user-friendly Java applications.",
+    images: ["https://i.ibb.co/hRvQBHfL/Diagram.png", "https://i.ibb.co/TDGkZVkh/Singleton.png", "https://i.ibb.co/NRftTyp/Open-Weather.png"],
+    githubLink: "https://github.com/danielvdh24/weather-wise",
+    color: "rgba(48, 81, 180, 0.7)"
+  },
+  {
+    id: "project7",
     name: "Serpent",
     description: "A snake game built with JavaFX.",
     demo: "https://player.vimeo.com/video/1062888147?h=fe3d1ae96a",
