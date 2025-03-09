@@ -68,9 +68,21 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  @media (max-width: 768px) {
+    .portfolio-container {
+      @apply max-w-full px-2;
+    }
+  }
+
   .tab {
     @apply h-10 px-3 py-2 rounded-t-lg text-sm font-medium relative transition-all duration-500 cursor-pointer;
     will-change: transform, min-width, max-width, background-color;
+  }
+
+  @media (max-width: 768px) {
+    .tab {
+      @apply h-8 px-2 text-xs;
+    }
   }
 
   .tab-active {
@@ -104,8 +116,19 @@
   }
 }
 
+@media (max-width: 499px) {
+  @supports (padding: env(safe-area-inset-top)) {
+    body {
+      background-color: var(--background);
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
+}
+
 html, body {
   overflow: auto;
+  overscroll-behavior: none;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
