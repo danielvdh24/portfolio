@@ -60,7 +60,7 @@ const ProjectTabs = ({ projects, activeProjectId, onTabChange }: ProjectTabsProp
               textOverflow: "ellipsis",
               transition: "all 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.3s ease-in-out",
               transform: isHovered && !isActive ? "translateY(-3px)" : "translateY(0)",
-              // Connect with content - remove bottom radius when active
+              // Remove bottom radius when active
               borderBottomLeftRadius: isActive ? "0" : "8px",
               borderBottomRightRadius: isActive ? "0" : "8px",
               borderBottom: isActive ? "3px solid" : "none",
