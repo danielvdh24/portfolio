@@ -21,7 +21,7 @@ const ProjectTabs = ({ projects, activeProjectId, onTabChange }: ProjectTabsProp
   const activeBackgroundColor = activeProject ? activeProject.color : "rgba(65, 105, 225, 0.7)";
 
   return (
-    <div className="flex space-x-0.25 overflow-x-auto w-full relative z-10 -mb-1" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+    <div className="flex space-x-0.25 overflow-x-auto w-full relative z-10 -mb-1" style={{ scrollbarWidth: "none", msOverflowStyle: "none", overflow: "hidden" }}>
       {projects.map((project, index) => {
         const isActive = project.id === activeProjectId;
         const isHovered = project.id === hoveredTab;

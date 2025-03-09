@@ -7,7 +7,7 @@ interface FooterProps {
 
 const Footer = ({ className }: FooterProps) => {
   return (
-    <footer className={cn("py-4 mt-auto", className)}>
+    <footer className={cn("py-4 mt-auto animate-fade-in [animation-delay:200ms] opacity-0", className)}>
       <div className="portfolio-container flex items-center justify-start space-x-4">
         <div className="flex items-center space-x-3 bg-portfolio-blue/10 py-2 px-4 rounded-full backdrop-blur-sm">
           <User size={20} className="text-portfolio-white" />

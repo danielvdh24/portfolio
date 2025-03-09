@@ -8,8 +8,6 @@ Welcome to my personal portfolio, created using React, TypeScript, Vite, and Tai
 The purpose of this portfolio is to showcase my growth and skills acquired over the past three years during my Bachelor's in Software Engineering and Management at Gothenburg University, as I work towards becoming a Junior Software Engineer.
 
 ## Development
-To run project locally:
-
 ```bash
 git clone https://github.com/danielvdh24/project-folder-portfolio.git
 cd project-folder-portfolio
