@@ -18,7 +18,7 @@ const ProjectTabs = ({ projects, activeProjectId, onTabChange }: ProjectTabsProp
   }, []);
 
   const activeProject = projects.find(project => project.id === activeProjectId);
-  const activeBackgroundColor = activeProject ? activeProject.color : "rgba(65, 105, 225, 0.7)";
+  const activeBackgroundColor = activeProject ? activeProject.contentColor : "rgba(65, 105, 225, 0.7)";
 
   return (
     <div className="flex space-x-0.25 overflow-x-auto w-full relative z-10 -mb-1" style={{ scrollbarWidth: "none", msOverflowStyle: "none", overflow: "hidden" }}>
@@ -26,11 +26,12 @@ const ProjectTabs = ({ projects, activeProjectId, onTabChange }: ProjectTabsProp
         const isActive = project.id === activeProjectId;
         const isHovered = project.id === hoveredTab;
         const delay = 300 + index * 100;
-        const backgroundColor = project.color || "rgba(65, 105, 225, 0.7)";
+        const backgroundColor = project.contentColor
         const inactiveBackgroundColor = isActive
           ? backgroundColor
           : backgroundColor.replace("0.7)", "0.2)");
-        const hoveredBackgroundColor = project.color.replace("5)", "0.5)"); // Slightly brighter when hovered
+        // Slightly brighter when hovered
+        const hoveredBackgroundColor = project.contentColor.replace("5)", "0.5)");
 
         return (
           <div

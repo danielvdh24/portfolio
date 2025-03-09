@@ -9,8 +9,10 @@ export interface Project {
   comments?: string;
   images: string[];
   githubLink: string;
-  color?: string;
+  contentColor?: string;
+  pageColor?: string;
 }
+// 229 opacity
 
 export const projectsData: Project[] = [
   {
@@ -37,7 +39,8 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/jv8nsfFC/Order.png"
     ],
     githubLink: "https://github.com/danielvdh24/lindholmen-eats",
-    color: "rgba(146, 120, 69, 0.7)"
+    contentColor: "rgba(146, 120, 69, 0.7)",
+    pageColor: "rgb(112, 81, 55)"
   },
   {
     id: "project2",
@@ -68,7 +71,8 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/LzkDQ8Fz/Wifi.png"
     ],
     githubLink: "https://github.com/danielvdh24/green-guardian",
-    color: "rgba(46, 139, 87, 0.7)"
+    contentColor: "rgba(46, 139, 87, 0.7)",
+    pageColor: "rgb(22, 98, 71)"
   },
   {
     id: "project3",
@@ -94,7 +98,8 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/gZCB30Zb/Car.png"
     ],
     githubLink: "https://github.com/danielvdh24/cphysical-systems",
-    color: "rgba(75, 0, 130, 0.7)"
+    contentColor: "rgba(75, 0, 130, 0.7)",
+    pageColor: "rgb(48, 0, 110)"
   },
   {
     id: "project4",
@@ -121,7 +126,8 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/wNbCw18q/Derivative.png"
     ],
     githubLink: "https://github.com/danielvdh24/smart-match",
-    color: "rgba(180, 160, 48, 0.7)"
+    contentColor: "rgba(153, 130, 0, 0.7)",
+    pageColor: "rgb(128, 104, 34)"
   },
   {
     id: "project5",
@@ -148,7 +154,8 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/3q2HbkQ/Mongo.png"
     ],
     githubLink: "https://github.com/danielvdh24",
-    color: "rgba(95, 177, 182, 0.7)"
+    contentColor: "rgba(95, 177, 182, 0.7)",
+    pageColor: "rgb(66, 132, 157)"
   },
   {
     id: "project6",
@@ -172,7 +179,8 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/NRftTyp/Open-Weather.png"
     ],
     githubLink: "https://github.com/danielvdh24/weather-wise",
-    color: "rgba(48, 81, 180, 0.7)"
+    contentColor: "rgba(48, 81, 180, 0.7)",
+    pageColor: "rgb(24, 46, 155)"
   },
   {
     id: "project7",
@@ -198,6 +206,7 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/spDRmssX/Leaderboard.png"
     ],
     githubLink: "https://github.com/danielvdh24/serpent",
-    color: "rgba(117, 110, 133, 0.7)"
+    contentColor: "rgba(117, 110, 133, 0.7)",
+    pageColor: "rgb(86, 72, 112)"
   }
 ];

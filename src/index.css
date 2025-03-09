@@ -52,10 +52,12 @@
   }
 
   body {
-    @apply bg-portfolio-purple text-portfolio-black min-h-screen;
+    @apply text-portfolio-black min-h-screen;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--page-background, rgb(112, 81, 55));
+    transition: background-color 0.5s ease-out;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -116,14 +118,8 @@
   }
 }
 
-@media (max-width: 499px) {
-  @supports (padding: env(safe-area-inset-top)) {
-    body {
-      background-color: var(--background);
-      padding-top: env(safe-area-inset-top);
-      padding-bottom: env(safe-area-inset-bottom);
-    }
-  }
+html {
+  filter: saturate(1.5);
 }
 
 html, body {

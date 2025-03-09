@@ -69,7 +69,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
       )}
       style={{
         minHeight: "650px",
-        backgroundColor: project.color || "rgba(65, 105, 225, 0.7)",
+        backgroundColor: project.contentColor,
         opacity: loaded ? 0.95 : 0,
         transform: loaded ? "scale(1)" : "scale(0.97)",
         marginTop: "-1px",
