@@ -24,7 +24,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
   };
 
   const handleMouseDown = () => {
-    isDraggingRef.current = false; // Reset drag state
+    isDraggingRef.current = false;
   };
 
   const handleImageClick = (image: string) => {
@@ -37,7 +37,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
       setLoaded(true);
     }, 250);
 
-    return () => clearTimeout(timeout); // Cleanup timeout on unmount
+    return () => clearTimeout(timeout);
   }, [project.id]);
 
   useEffect(() => {
@@ -170,8 +170,8 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
               ref={scrollRef}
               className="flex gap-4 overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing select-none"
               style={{
-                scrollbarWidth: "none", // Hide scrollbar for Firefox
-                msOverflowStyle: "none", // Hide scrollbar for IE/Edge
+                scrollbarWidth: "none", // Hide scrollbar Firefox
+                msOverflowStyle: "none", // Hide scrollbar IE/Edge
               }}
               onMouseMove={handleMouseMove}
             >

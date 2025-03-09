@@ -16,15 +16,11 @@ const Index = () => {
 
   useEffect(() => {
     // Update the background color when the active project changes
-    // Using a darker variation of the project color
     setBackgroundColor(getDarkerColor(activeProject.color || "rgba(65, 105, 225, 0.7)"));
   }, [activeProject]);
 
-  // Function to create a darker version of the project color
   function getDarkerColor(color: string): string {
-    // For rgba colors, reduce the opacity and make it darker
     if (color.startsWith("rgba")) {
-      // Extract components
       const matches = color.match(/rgba\((\d+),\s*(\d+),\s*(\d+),\s*([\d.]+)\)/);
       if (matches) {
         const r = Math.max(0, parseInt(matches[1]) - 30);

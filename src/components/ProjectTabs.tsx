@@ -63,10 +63,10 @@ const ProjectTabs = ({ projects, activeProjectId, onTabChange }: ProjectTabsProp
               // Connect with content - remove bottom radius when active
               borderBottomLeftRadius: isActive ? "0" : "8px",
               borderBottomRightRadius: isActive ? "0" : "8px",
-              borderBottom: isActive ? "3px solid" : "none", // Remove bottom border completely
+              borderBottom: isActive ? "3px solid" : "none",
               clipPath: isActive
                 ? "none"
-                : "polygon(0 0, 100% 0, 100% 89%, 0% 89%)", // Cuts off inactive tabs
+                : "polygon(0 0, 100% 0, 100% 89%, 0% 89%)",
               // Make active tab taller to connect with content
               height: isActive ? "45px" : "40px",
               marginBottom: isActive ? "-5px" : "0",
