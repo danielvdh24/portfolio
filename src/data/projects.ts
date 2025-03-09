@@ -99,7 +99,7 @@ export const projectsData: Project[] = [
     ],
     githubLink: "https://github.com/danielvdh24/cphysical-systems",
     contentColor: "rgba(75, 0, 130, 0.7)",
-    pageColor: "rgb(48, 0, 110)"
+    pageColor: "rgb(59, 31, 97)"
   },
   {
     id: "project4",
@@ -155,7 +155,7 @@ export const projectsData: Project[] = [
     ],
     githubLink: "https://github.com/danielvdh24",
     contentColor: "rgba(95, 177, 182, 0.7)",
-    pageColor: "rgb(66, 132, 157)"
+    pageColor: "rgb(54, 117, 139)"
   },
   {
     id: "project6",
@@ -180,7 +180,7 @@ export const projectsData: Project[] = [
     ],
     githubLink: "https://github.com/danielvdh24/weather-wise",
     contentColor: "rgba(48, 81, 180, 0.7)",
-    pageColor: "rgb(24, 46, 155)"
+    pageColor: "rgb(40, 56, 134)"
   },
   {
     id: "project7",
