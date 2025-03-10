@@ -39,8 +39,8 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/jv8nsfFC/Order.png"
     ],
     githubLink: "https://github.com/danielvdh24/lindholmen-eats",
-    contentColor: "rgba(146, 120, 69, 0.7)",
-    pageColor: "rgb(112, 81, 55)"
+    contentColor: "rgba(140, 100, 72, 0.7)",
+    pageColor: "rgb(106, 76, 52)"
   },
   {
     id: "project2",
@@ -94,12 +94,12 @@ export const projectsData: Project[] = [
     comments: "This project brought together computer vision, embedded systems, and machine learning to develop an autonomous navigation system. Using Docker helped create a consistent environment whilst working on Python, making deployment and testing smoother. We worked on a predictive steering algorithm, which meant a lot of iteration and fine-tuning to handle real-world constraints. Integrating C++ for image recognition showed me just how tricky real-time processing can be on embedded hardware. Performance testing in GitLab’s CI/CD pipeline helped refine the system for better accuracy and efficiency. This was a hands-on learning experience in cyber-physical systems, deployment, and autonomous vehicle control.",
     images: [
       "https://i.ibb.co/prxBD1zV/Design.png", 
-      "https://i.ibb.co/rKbj8CqC/Steering-Methods.jpg", 
+      "https://i.ibb.co/rKbj8CqC/Steering-Methods.jpg",
       "https://i.ibb.co/gZCB30Zb/Car.png"
     ],
     githubLink: "https://github.com/danielvdh24/cphysical-systems",
-    contentColor: "rgba(75, 0, 130, 0.7)",
-    pageColor: "rgb(59, 31, 97)"
+    contentColor: "rgba(104, 52, 141, 0.7)",
+    pageColor: "rgb(57, 23, 104)"
   },
   {
     id: "project4",
@@ -126,11 +126,36 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/wNbCw18q/Derivative.png"
     ],
     githubLink: "https://github.com/danielvdh24/smart-match",
-    contentColor: "rgba(153, 130, 0, 0.7)",
-    pageColor: "rgb(128, 104, 34)"
+    contentColor: "rgba(72, 130, 122, 0.7)",
+    pageColor: "rgb(50, 98, 92)"
   },
   {
     id: "project5",
+    name: "Weather Wise",
+    description: "A lightweight program to find the latest weather data.",
+    demo: "https://player.vimeo.com/video/1062366303?h=bb0b588461",
+    features: [
+      "Clean, intuitive interface built with JavaFX.", 
+      "City & geolocation-based weather search.", 
+      "Adaptive weather icons.", 
+      "Invalid input validation."
+    ],
+    technology: ["Java", "ApacheMaven"],
+    authors: [
+      { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" }
+    ],
+    comments: "This project was all about JavaFX development, API integration, and UI design for a real-time weather application. I learned a lot about handling live data, making sure error validation was solid, and keeping the app reliable. Using the Singleton pattern for API calls made data fetching more efficient, and adding geolocation support and adaptive icons improved usability. JavaFX was a great way to dive deeper into modular development, and overall, this project helped me sharpen my skills in real-time data processing and building smooth, user-friendly Java applications.",
+    images: [
+      "https://i.ibb.co/hRvQBHfL/Diagram.png", 
+      "https://i.ibb.co/TDGkZVkh/Singleton.png", 
+      "https://i.ibb.co/NRftTyp/Open-Weather.png"
+    ],
+    githubLink: "https://github.com/danielvdh24/weather-wise",
+    contentColor: "rgba(37, 63, 139, 0.7)",
+    pageColor: "rgb(46, 58, 121)"
+  },
+  {
+    id: "project6",
     name: "Smile Slot",
     description: "A dental service booking system using microservices.",
     demo: "https://player.vimeo.com/video/1062963320?h=6db7115876",
@@ -154,33 +179,8 @@ export const projectsData: Project[] = [
       "https://i.ibb.co/3q2HbkQ/Mongo.png"
     ],
     githubLink: "https://github.com/danielvdh24",
-    contentColor: "rgba(95, 177, 182, 0.7)",
-    pageColor: "rgb(54, 117, 139)"
-  },
-  {
-    id: "project6",
-    name: "Weather Wise",
-    description: "A lightweight program to find the latest weather data.",
-    demo: "https://player.vimeo.com/video/1062366303?h=bb0b588461",
-    features: [
-      "Clean, intuitive interface built with JavaFX.", 
-      "City & geolocation-based weather search.", 
-      "Adaptive weather icons.", 
-      "Invalid input validation."
-    ],
-    technology: ["Java", "ApacheMaven"],
-    authors: [
-      { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" }
-    ],
-    comments: "This project was all about JavaFX development, API integration, and UI design for a real-time weather application. I learned a lot about handling live data, making sure error validation was solid, and keeping the app reliable. Using the Singleton pattern for API calls made data fetching more efficient, and adding geolocation support and adaptive icons improved usability. JavaFX was a great way to dive deeper into modular development, and overall, this project helped me sharpen my skills in real-time data processing and building smooth, user-friendly Java applications.",
-    images: [
-      "https://i.ibb.co/hRvQBHfL/Diagram.png", 
-      "https://i.ibb.co/TDGkZVkh/Singleton.png", 
-      "https://i.ibb.co/NRftTyp/Open-Weather.png"
-    ],
-    githubLink: "https://github.com/danielvdh24/weather-wise",
-    contentColor: "rgba(48, 81, 180, 0.7)",
-    pageColor: "rgb(40, 56, 134)"
+    contentColor: "rgba(53, 137, 150, 0.7)",
+    pageColor: "rgb(45, 105, 116)"
   },
   {
     id: "project7",
