@@ -32,7 +32,7 @@ export const projectsData: Project[] = [
       { name: "Nasit Vurgun", github: "https://github.com/vurg" },
       { name: "Kai Rowley", github: "https://github.com/irmata" }
     ],
-    comments: "This project was a deep dive into full-stack development with Vue.js, Node.js, and MongoDB. I focused on keeping the code modular, integrating APIs smoothly, and making sure everything worked well across different devices. Working with an agile mindset by using milestones, pipelines on GitLab, and regular iterations—really helped streamline development. Security was a big consideration too, from handling authentication to managing environment variables properly. Good communication kept the team on the same page, and overall, this project gave me hands-on experience in building scalable and maintainable web apps under real-world conditions.",
+    comments: "This project was a deep dive into full-stack development with Vue.js, Node.js, and MongoDB. I focused on keeping the code modular, integrating APIs smoothly, and making sure everything worked well across different devices. Working with an agile mindset by using milestones, pipelines on GitLab, and regular iterations really helped streamline development. Security was a big consideration too, from handling authentication to managing environment variables properly. Good communication kept the team on the same page, and overall, this project gave me hands-on experience in building scalable and maintainable web apps under real-world conditions.",
     images: [
       "https://i.ibb.co/DPFKywLX/Map.png",
       "https://i.ibb.co/hvWz2Qk/Menu.png",
@@ -62,7 +62,7 @@ export const projectsData: Project[] = [
       { name: "Vlad Manea", github: "https://github.com/vldnic23" },
       { name: "Markus Warbert", github: "https://github.com/warbert" }
     ],
-    comments: "This project pushed me to work with hardware-software integration, real-time data processing, and IoT communication using the MQTT protocol. We programmed the Wio Terminal with Arduino IDE (basically C++), and setting up a three-tier system gave me a solid understanding of distributed architecture. There were plenty of challenges such as like sensor inaccuracies that forced us to adapt and problem-solve. Commit tracking and structured reviews helped maintain quality, and manual testing ensured stability. In the end, this project gave me great experience in embedded systems and designing reliable, user-friendly IoT solutions.",
+    comments: "This project pushed me to work with hardware-software integration, real-time data processing, and IoT communication using the MQTT protocol. We programmed the Wio Terminal with Arduino IDE (basically C++), and setting up a three-tier system gave me a solid understanding of distributed architecture. There were plenty of challenges such as like sensor inaccuracies that forced us to adapt to using new sensors under tight time constraints. Commit tracking and structured reviews helped maintain quality, and manual testing ensured stability. In the end, this project gave me great experience in embedded systems and designing reliable, user-friendly IoT solutions.",
     images: [
       "https://i.ibb.co/cXYZqHz5/Wiring.png", 
       "https://i.ibb.co/8ngF52Jm/greenguardian-system.jpg", 
@@ -91,7 +91,7 @@ export const projectsData: Project[] = [
       { name: "Sam Hardingham", github: "https://github.com/samhardingham" },
       { name: "Daniel Van Den Heuvel", github: "https://github.com/danielvdh24" }
     ],
-    comments: "This project brought together computer vision, embedded systems, and machine learning to develop an autonomous navigation system. Using Docker helped create a consistent environment whilst working on Python, making deployment and testing smoother. We worked on a predictive steering algorithm, which meant a lot of iteration and fine-tuning to handle real-world constraints. Integrating C++ for image recognition showed me just how tricky real-time processing can be on embedded hardware. Performance testing in GitLab’s CI/CD pipeline helped refine the system for better accuracy and efficiency. This was a hands-on learning experience in cyber-physical systems, deployment, and autonomous vehicle control.",
+    comments: "This project brought together computer vision, embedded systems, and machine learning to develop an autonomous navigation system on Linux. Using Docker helped create a consistent environment whilst working on Python, making deployment and testing smoother. We worked on a predictive steering algorithm, which meant a lot of iteration and fine-tuning to handle real-world constraints. Integrating C++ for image recognition showed me just how tricky real-time processing can be on embedded hardware. Performance testing in GitLab’s CI/CD pipeline helped refine the system for better accuracy and efficiency. This was a hands-on learning experience in cyber-physical systems, deployment, and autonomous vehicle control.",
     images: [
       "https://i.ibb.co/prxBD1zV/Design.png", 
       "https://i.ibb.co/rKbj8CqC/Steering-Methods.jpg",
@@ -119,7 +119,7 @@ export const projectsData: Project[] = [
       { name: "Abdullahi Mahamed", github: "https://github.com/abdullahimahamed" },
       { name: "Vilmer Hedin", github: "https://github.com/vilmerhedin" }
     ],
-    comments: "This project was a great learning experience in machine learning, cloud deployment, and software architecture. We used TF-IDF and Naive Bayes classification to improve resume-to-job matching, and deploying everything with Docker and Kubernetes made sure it ran smoothly in the cloud. Setting up CI/CD pipelines in GitLab automated testing and updates, which really improved reliability. One of the bigger challenges was handling data persistence in the cloud, but we solved that with persistent disks. Early on, we didn’t plan the structure as well as we should have, which led to some inefficiencies—definitely a lesson learned about proper documentation and system design from the start. Looking ahead, adding job listing integrations and PDF resume uploads would make the system even better.",
+    comments: "This project was a great learning experience in machine learning, cloud deployment, and software architecture. We used TF-IDF and Naive Bayes classification to improve resume-to-job matching, and deploying everything with Docker and Kubernetes made sure it ran smoothly in the cloud. Setting up CI/CD pipelines in GitLab automated testing and updates, which really improved reliability. One of the bigger challenges was handling data persistence in the cloud, but we solved that with persistent disks. Early on, we didn’t plan the structure as well as we should have, which led to some inefficiencies. This was definitely a lesson learned about proper documentation and system design from the start. Looking ahead, adding job listing integrations and PDF resume uploads would make the system more intuitive.",
     images: [
       "https://i.ibb.co/R4S0rrd7/Admin.png", 
       "https://i.ibb.co/HL2TC8Xh/Resumes.png", 
