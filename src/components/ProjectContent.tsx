@@ -12,6 +12,14 @@ interface ProjectContentProps {
 const ProjectContent = ({ project }: ProjectContentProps) => {
   const [loaded, setLoaded] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
+
+  const getVideoUrl = (url: string) => {
+    if (url.startsWith("http")) return url;
+    const base = import.meta.env.BASE_URL;
+    const cleanBase = base.endsWith("/") ? base : `${base}/`;
+    const cleanUrl = url.startsWith("/") ? url.slice(1) : url;
+    return `${cleanBase}${cleanUrl}`;
+  };
   const [isVideoFullscreen, setIsVideoFullscreen] = useState(false);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const isDraggingRef = useRef(false);
@@ -113,7 +121,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
             <div className="space-y-2 relative group">
               <div className="bg-black/80 rounded-lg aspect-video overflow-hidden relative">
                 <video
-                  src={project.demo}
+                  src={getVideoUrl(project.demo)}
                   autoPlay
                   loop
                   muted
@@ -295,7 +303,7 @@ const ProjectContent = ({ project }: ProjectContentProps) => {
                 onClick={(e) => e.stopPropagation()}
               >
                 <video
-                  src={project.demo}
+                  src={getVideoUrl(project.demo)}
                   autoPlay
                   loop
                   muted
