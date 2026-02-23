@@ -21,63 +21,82 @@ const ProjectTabs = ({ projects, activeProjectId, onTabChange }: ProjectTabsProp
   const activeBackgroundColor = activeProject ? activeProject.contentColor : "rgba(65, 105, 225, 0.7)";
 
   return (
-    <div className="flex space-x-0.25 overflow-x-auto w-full relative z-10 -mb-1" style={{ scrollbarWidth: "none", msOverflowStyle: "none", overflow: "hidden" }}>
+    <div className="flex items-end w-full h-[45px] relative z-10" style={{ scrollbarWidth: "none", msOverflowStyle: "none", overflowX: "auto", overflowY: "hidden" }}>
       {projects.map((project, index) => {
         const isActive = project.id === activeProjectId;
         const isHovered = project.id === hoveredTab;
         const delay = 300 + index * 100;
-        const backgroundColor = project.contentColor
-        const inactiveBackgroundColor = isActive
-          ? backgroundColor
-          : backgroundColor.replace("0.7)", "0.2)");
-        // Slightly brighter when hovered
-        const hoveredBackgroundColor = project.contentColor.replace("5)", "0.5)");
+        // To prevent transparent alpha channels overlapping and creating dark spots, 
+        // we'll mix the 0.8 / 0.9 alpha manually against white to generate a solid rgb string
+        const baseColor = project.contentColor || "rgba(65, 105, 225, 1)";
+
+        let inactiveBackgroundColor, hoveredBackgroundColor, activeColor;
+
+        // Extract RGB values
+        const rgbMatch = baseColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+        if (rgbMatch) {
+          const r = parseInt(rgbMatch[1]);
+          const g = parseInt(rgbMatch[2]);
+          const b = parseInt(rgbMatch[3]);
+
+          activeColor = `rgb(${r}, ${g}, ${b})`;
+          // Mix 80% color + 20% white for inactive
+          inactiveBackgroundColor = `rgb(${Math.round(r * 0.8 + 255 * 0.2)}, ${Math.round(g * 0.8 + 255 * 0.2)}, ${Math.round(b * 0.8 + 255 * 0.2)})`;
+          // Mix 90% color + 10% white for hovered
+          hoveredBackgroundColor = `rgb(${Math.round(r * 0.9 + 255 * 0.1)}, ${Math.round(g * 0.9 + 255 * 0.1)}, ${Math.round(b * 0.9 + 255 * 0.1)})`;
+        } else {
+          activeColor = baseColor;
+          inactiveBackgroundColor = baseColor.replace("1)", "0.8)");
+          hoveredBackgroundColor = baseColor.replace("1)", "0.9)");
+        }
 
         return (
           <div
             key={project.id}
             className={cn(
-              "tab",
+              "tab flex-shrink-0",
               isActive ? "tab-active z-10" : "tab-inactive",
               loaded ? "animate-fade-in opacity-0" : "opacity-0",
             )}
             style={{
               backgroundColor: isActive
-                ? activeBackgroundColor
+                ? activeColor
                 : isHovered
                   ? hoveredBackgroundColor
                   : inactiveBackgroundColor,
 
-              filter: isActive
-                ? "none"
-                : isHovered
-                  ? "brightness(90%)"
-                  : "brightness(75%)",
+              filter: "none",
               animationDelay: `${delay}ms`,
-              minWidth: isActive ? "auto" : "60px",
-              maxWidth: isActive ? "280px" : "60px",
+              minWidth: "80px",
+              maxWidth: isActive ? "280px" : "80px",
               overflow: "hidden",
               whiteSpace: "nowrap",
-              textOverflow: "ellipsis",
               transition: "all 0.5s ease-in-out, background-color 0.5s ease-in-out, transform 0.3s ease-in-out",
               transform: isHovered && !isActive ? "translateY(-3px)" : "translateY(0)",
               // Remove bottom radius when active
-              borderBottomLeftRadius: isActive ? "0" : "8px",
-              borderBottomRightRadius: isActive ? "0" : "8px",
-              borderBottom: isActive ? "3px solid" : "none",
-              clipPath: isActive
-                ? "none"
-                : "polygon(0 0, 100% 0, 100% 89%, 0% 89%)",
+              borderBottomLeftRadius: "0",
+              borderBottomRightRadius: "0",
+              clipPath: "none",
               // Make active tab taller to connect with content
               height: isActive ? "45px" : "40px",
-              marginBottom: isActive ? "-5px" : "0",
-              boxShadow: isActive ? `0 -2px 10px rgba(0,0,0,0.1), 0 0 1px ${backgroundColor}` : "none",
+              marginBottom: "0",
+              paddingBottom: isActive ? "5px" : "0", // extend active tab down to cover any gap
+              boxShadow: isActive ? "none" : "none",
+              zIndex: isActive ? 20 : 1,
             }}
             onClick={() => onTabChange(project.id)}
             onMouseEnter={() => setHoveredTab(project.id)}
             onMouseLeave={() => setHoveredTab(null)}
           >
-            {project.name}
+            <div
+              style={{
+                width: "100%",
+                maskImage: isActive ? "none" : "linear-gradient(to right, black 65%, transparent 100%)",
+                WebkitMaskImage: isActive ? "none" : "linear-gradient(to right, black 65%, transparent 100%)",
+              }}
+            >
+              {project.name}
+            </div>
           </div>
         );
       })}

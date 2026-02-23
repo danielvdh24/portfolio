@@ -14,24 +14,24 @@ const Header = ({ className }: HeaderProps) => {
           <p className="text-xl md:text-2xl font-semibold text-portfolio-black pl-1.5">Daniel Van Den Heuvel</p>
         </div>
         <div className="flex space-x-4 animate-fade-in [animation-delay:400ms] opacity-0 mt-4 md:mt-0">
-          <a 
-            href="https://linkedin.com/in/danielvdh24" 
-            target="_blank" 
+          <a
+            href="https://linkedin.com/in/danielvdh24"
+            target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
             aria-label="LinkedIn"
           >
-            <Linkedin size={24} className="text-portfolio-white hover:scale-110 transition-transform duration-300" />
+            <Linkedin size={24} className="text-portfolio-black hover:scale-110 transition-transform duration-300" />
           </a>
 
-          <a 
+          <a
             href="https://github.com/danielvdh24/portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="icon-link"
             aria-label="GitHub"
           >
-            <Github size={24} className="text-portfolio-white hover:scale-110 transition-transform duration-300" />
+            <Github size={24} className="text-portfolio-black hover:scale-110 transition-transform duration-300" />
           </a>
         </div>
       </div>
